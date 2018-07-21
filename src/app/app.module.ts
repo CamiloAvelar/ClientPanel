@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
+import { SettingsService } from './services/settings.service';
 
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
@@ -49,7 +51,9 @@ import { AppRoutingModule } from './/app-routing.module';
     FlashMessagesModule.forRoot()
   ],
   providers: [
-    ClientService
+    ClientService,
+    AuthService,
+    SettingsService
   ],
   bootstrap: [AppComponent]
 })
